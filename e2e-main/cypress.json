@@ -1,0 +1,21 @@
+{
+    "integrationFolder": "cypress/integration",
+    "supportFile": "cypress/support",
+    "fixturesFolder": "cypress/fixtures",
+    "pluginsFile": "cypress/plugins",
+    "viewportHeight": 1080,
+    "viewportWidth": 1920,
+    "baseUrl": "https://dev.my.gudel.com/",
+    "pageLoadTimeout": 60000,
+    "taskTimeOut": 50000,
+    "screenshotOnRunFailure": false,
+    "video": false,
+    "videoUploadOnPasses": false,
+    "chromeWebSecurity": false,
+    "reporter": "cypress-qase-reporter",
+    "reporterOptions": {
+        "apiToken": "03cd07b87806c11d541ece4d054c1c884a1ba74e",
+        "projectCode": "GD2",
+        "logging": true
+    }
+}

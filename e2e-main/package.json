@@ -1,0 +1,45 @@
+{
+    "name": "mygudel-e2e",
+    "version": "1.0.0",
+    "description": "E2E UI Automation tests of Gudel v2 application",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx cypress run",
+        "open:dashboard": "npx cypress open",
+        "test:chrome": "npx cypress run --browser chrome",
+        "test:qase:allure": "set QASE_REPORT=1 && npx cypress run --env allure=true",
+        "test:qase": "set QASE_REPORT=1 && npx cypress run",
+        "test:allure": "npx cypress run --env allure=true",
+        "create:run": "node test-run-setup.js",
+        "generate:allure:report": "allure generate allure-results -o allure-report",
+        "open:allure:report": "allure open allure-report",
+        "new:test:run": "node test-run-setup.js",
+        "lint:fix": "npx prettier --write .",
+        "lint:check": "npx prettier --check . "
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://gitlab.elunic.software/g-del-apps/mygudel/mygudel-e2e.git"
+    },
+    "keywords": [
+        "e2e",
+        "ui",
+        "automation",
+        "cypress",
+        "ui",
+        "gudel"
+    ],
+    "author": "QA Elunic team",
+    "license": "ISC",
+    "dependencies": {
+        "@faker-js/faker": "^6.0.0-alpha.7",
+        "@shelex/cypress-allure-plugin": "^2.26.5",
+        "allure-commandline": "^2.17.2",
+        "cypress": "^9.5.1",
+        "cypress-qase-reporter": "^1.4.1",
+        "dotenv": "^16.0.0",
+        "prettier": "^2.5.1",
+        "superagent": "^7.1.1",
+        "typescript": "^4.6.2"
+    }
+}
